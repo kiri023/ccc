@@ -39,3 +39,4 @@
 python -m http.server 4173 --directory app
 ```
 브라우저에서 `http://127.0.0.1:4173/index.html` 을 열면 아침 브리프 위젯 데모 화면을 볼 수 있습니다.
+=
