@@ -1,0 +1,112 @@
+:root {
+  --bg: #f3f6ff;
+  --card: #ffffff;
+  --text: #171923;
+  --muted: #5f6b7a;
+  --safety: #ffe9e9;
+  --comfort: #fff6da;
+  --behavior: #e8f9ef;
+  --primary: #3b82f6;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #eff6ff 0%, var(--bg) 70%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  display: grid;
+  place-items: start center;
+  min-height: 100vh;
+  padding: 24px 12px;
+}
+
+.phone {
+  width: min(460px, 95vw);
+  background: #f8fbff;
+  border: 1px solid #dde7ff;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 14px 32px rgba(49, 81, 172, 0.15);
+}
+
+.chip {
+  display: inline-block;
+  background: #e0ebff;
+  color: #1e3a8a;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h1 { margin: 12px 0 8px; font-size: 24px; }
+h2 { margin: 0 0 10px; font-size: 16px; }
+#summary { margin: 0; color: var(--muted); font-size: 14px; }
+
+.panel,
+.cards-wrap,
+.touchpoints {
+  margin-top: 16px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px;
+  border: 1px solid #e7edf6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+label {
+  font-size: 12px;
+  color: #334155;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input,
+select {
+  border: 1px solid #d3dcea;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 14px;
+  background: #fcfdff;
+}
+
+.cards {
+  display: grid;
+  gap: 10px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #e7edf6;
+}
+.card.safety { background: var(--safety); }
+.card.comfort { background: var(--comfort); }
+.card.behavior { background: var(--behavior); }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: #374151; font-size: 14px; }
+
+.touchpoints h3 { margin: 0 0 8px; font-size: 15px; }
+.touchpoints ul { margin: 0; padding-left: 18px; color: #475569; }
+.touchpoints li + li { margin-top: 4px; }
+
+.cta {
+  width: 100%;
+  margin-top: 12px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px;
+  cursor: pointer;
+}
