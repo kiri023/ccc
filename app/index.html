@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아침 루틴 브리프 - MVP 데모</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="phone">
+      <header class="top">
+        <p class="chip">아침 루틴 브리프 · MVP</p>
+        <h1>오늘 챙길 것, 10초 만에 확인</h1>
+        <p id="summary">데이터를 입력하면 오늘 브리프가 생성됩니다.</p>
+      </header>
+
+      <section class="panel" aria-label="날씨 입력">
+        <h2>오늘 날씨 입력</h2>
+        <div class="grid">
+          <label>현재 기온 (°C)
+            <input id="temp" type="number" value="12" />
+          </label>
+          <label>체감온도 (°C)
+            <input id="feelsLike" type="number" value="8" />
+          </label>
+          <label>강수확률 (%)
+            <input id="rainChance" type="number" min="0" max="100" value="70" />
+          </label>
+          <label>초미세먼지 등급
+            <select id="dust">
+              <option value="good">좋음</option>
+              <option value="normal">보통</option>
+              <option value="bad" selected>나쁨</option>
+              <option value="very-bad">매우 나쁨</option>
+            </select>
+          </label>
+          <label>풍속 (m/s)
+            <input id="wind" type="number" min="0" step="0.1" value="4.2" />
+          </label>
+          <label>자외선 지수
+            <select id="uv">
+              <option value="low">낮음</option>
+              <option value="mid">보통</option>
+              <option value="high">높음</option>
+              <option value="very-high">매우 높음</option>
+            </select>
+          </label>
+        </div>
+        <button id="generate" class="cta">오늘 브리프 생성</button>
+      </section>
+
+      <section class="cards-wrap" aria-label="준비물 추천">
+        <h2>준비물 추천 카드 (최대 3개)</h2>
+        <div id="cards" class="cards"></div>
+      </section>
+
+      <section class="touchpoints" aria-label="오늘 터치포인트">
+        <h3>오늘의 재방문 포인트</h3>
+        <ul>
+          <li>07:30 아침 브리프 알림</li>
+          <li>출발 30~60분 전 최종 체크 알림</li>
+          <li>21:00~22:00 내일 예고 알림</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
