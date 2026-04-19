@@ -46,3 +46,10 @@ python -m http.server 4173 --directory app
   준비물/행동 추천 카드(최대 3개)를 생성하는 MVP 데모가 동작합니다.
 - 추천 규칙은 `docs/recommendation-rules.md`의 기준(강수 60%+, 체감 10°C 이하 등)을 따릅니다.
 - 카드 우선순위는 안전/건강 → 편의 → 행동 가이드 순으로 적용됩니다.
+
+
+## GitHub Pages에서 열기
+GitHub Pages가 루트(`/`)를 서빙하도록 되어 있으면 `index.html`이 자동으로 `app/index.html`로 이동시킵니다.
+
+- Pages URL 접속: `https://<username>.github.io/ccc/`
+- 직접 접속: `https://<username>.github.io/ccc/app/index.html`
